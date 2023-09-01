@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    code-server:
+        container_name: code-server
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - TZ=America/Tijuana
+            - PASSWORD=15963pknht
+            - SUDO_PASSWORD=15963pknht
+            - DEFAULT_WORKSPACE=/workspace #optional
+        ports:
+            - '8445:8443'
+        volumes:
+            - './data/code:/config'
+        restart: unless-stopped
+        image: linuxserver/code-server
