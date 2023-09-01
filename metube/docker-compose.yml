@@ -8,3 +8,5 @@ services:
       - "3023:8081"
     volumes:
       - ${EXTERNO}:/downloads
+    env_file: 
+      - ../../.env
