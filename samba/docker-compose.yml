@@ -1,0 +1,15 @@
+services:
+  samba:
+    container_name: samba
+    image: ciberbago/samba-auto
+    ports:
+      - 445:445
+      - 139:139
+    volumes:
+      - ${EXTERNO}:/mnt/jaime
+    environment:
+      - user_count=1
+      - user1=jaime
+      - password1=15963pknht
+      - sharename1=NAS
+    restart: unless-stopped
