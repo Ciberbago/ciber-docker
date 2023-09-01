@@ -6,7 +6,6 @@ services:
     ports:
       - 81:3000
     volumes:
-      - ./data/hp:/app/config # Make sure your local config directory exists
-      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
-      - ./data/hp/icons:/app/public/icons
+      - ./data:/app/config # Make sure your local config directory exists
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integration
     restart: unless-stopped
