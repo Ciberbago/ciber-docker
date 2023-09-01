@@ -3,7 +3,7 @@ services:
     drawio:
         container_name: draw
         ports:
-            - '8075:8080'
+            - '807:8080'
             - '8446:8443'
         image: jgraph/drawio
         restart: unless-stopped
