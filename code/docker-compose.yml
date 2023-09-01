@@ -12,6 +12,6 @@ services:
         ports:
             - '8445:8443'
         volumes:
-            - './data/code:/config'
+            - './data:/config'
         restart: unless-stopped
         image: linuxserver/code-server

@@ -3,7 +3,8 @@ services:
     bockiii:
         container_name: Deemix
         volumes:
-            - './data/deemix:/config'
+            - './data:/config'
+            - '${EXTERNO}/music:/downloads'
         environment:
             - PUID=1000
             - PGID=1000
