@@ -10,6 +10,8 @@ services:
       - /opt/yacht:/config
       - /var/run/docker.sock:/var/run/docker.sock
     image: selfhostedpro/yacht
-
+    environment:
+      - PUID=1000
+      - PGID=1000
 volumes:
   yacht:
