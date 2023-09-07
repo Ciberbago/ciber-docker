@@ -6,7 +6,7 @@ services:
             - '5800:5800'
         volumes:
             - './data:/config:rw'
-            - '${EXTERNO}/downloads:/output:rw'
+            - '${EXTERNO}/descargas:/output:rw'
         image: jlesage/jdownloader-2
         environment:
             - DISPLAY_WIDTH=1920

@@ -7,6 +7,5 @@ services:
     ports:
       - "3023:8081"
     volumes:
-      - ${EXTERNO}:/downloads
-    env_file: 
-      - ../../.env
+      - ${EXTERNO}/videos:/downloads
+      - ${EXTERNO}/music:/downloads/musica
