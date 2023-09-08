@@ -3,10 +3,10 @@
    wolweb: 
      container_name: 'wolweb'
      image: 'k8sdock/wolweb_amd64:latest'
-     hostname: 'wolweb'
-     restart: unless-stopped
-     network_mode: host
      environment:
        WOLWEBBCASTIP: '192.168.15.255:9'
        WOLWEBPORT: '8090'
        WOLWEBVDIR: '/wolweb'
+     hostname: 'wolweb'
+     network_mode: host
+     restart: unless-stopped

@@ -2,6 +2,11 @@ version: '3.3'
 services:
     code-server:
         container_name: code-server
+        image: linuxserver/code-server
+        volumes:
+            - './data:/config'
+        ports:
+            - '8445:8443'
         environment:
             - PUID=1000
             - PGID=1000
@@ -9,9 +14,4 @@ services:
             - PASSWORD=15963pknht
             - SUDO_PASSWORD=15963pknht
             - DEFAULT_WORKSPACE=/workspace #optional
-        ports:
-            - '8445:8443'
-        volumes:
-            - './data:/config'
         restart: unless-stopped
-        image: linuxserver/code-server

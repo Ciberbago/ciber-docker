@@ -1,10 +1,10 @@
 version: '3.3'
 services:
     filebrowser:
+        container_name: filebrowser
+        image: filebrowser/filebrowser
+        volumes:
+            - '/:/srv'
         ports:
             - '8088:80'
         restart: unless-stopped
-        container_name: filebrowser
-        volumes:
-            - '/:/srv'
-        image: filebrowser/filebrowser

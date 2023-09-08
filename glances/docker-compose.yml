@@ -1,13 +1,13 @@
 version: '3.3'
 services:
     glances:
-        restart: always
+        container_name: glances
+        image: nicolargo/glances:latest-full
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock:ro'
         ports:
             - '61208-61209:61208-61209'
         environment:
             - GLANCES_OPT=-w
-        volumes:
-            - '/var/run/docker.sock:/var/run/docker.sock:ro'
         pid: host
-        container_name: glances
-        image: nicolargo/glances:latest-full
+        restart: unless-stopped

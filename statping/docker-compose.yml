@@ -4,15 +4,11 @@ services:
   statping:
     container_name: statping
     image: adamboutcher/statping-ng:latest
-    restart: always
     volumes:
       - ./data:/app
       - /etc/timezone:/etc/timezone:ro
-    environment:
-      DB_CONN: sqlite
-    user: 0:0
     ports:
       - 9012:8080
-
-volumes:
-  statping_data:
+    environment:
+      DB_CONN: sqlite
+    restart: always

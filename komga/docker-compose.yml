@@ -2,13 +2,12 @@
 version: '3.3'
 services:
   komga:
-    image: gotson/komga:latest
     container_name: komga
+    image: gotson/komga:latest
     volumes:
       - ./data:/config
       - ${EXTERNO}/comics:/data
       - /etc/timezone:/etc/timezone:ro
     ports:
       - 8081:25600
-    # remove the whole environment section if you don't need it
     restart: unless-stopped

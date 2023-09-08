@@ -1,11 +1,11 @@
 version: "3"
 services:
   metube:
-    image: alexta69/metube
     container_name: metube
-    restart: unless-stopped
-    ports:
-      - "3023:8081"
+    image: alexta69/metube
     volumes:
       - ${EXTERNO}/videos:/downloads
       - ${EXTERNO}/music:/downloads/musica
+    ports:
+      - "3023:8081"
+    restart: unless-stopped

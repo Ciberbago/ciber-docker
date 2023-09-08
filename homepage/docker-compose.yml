@@ -1,8 +1,8 @@
 version: "3.3"
 services:
   homepage:
-    image: ghcr.io/benphelps/homepage:latest
     container_name: homepage
+    image: ghcr.io/benphelps/homepage:latest
     ports:
       - 81:3000
     volumes:

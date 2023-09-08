@@ -1,15 +1,10 @@
 version: "3.0"
 services:
   memos:
-    image: neosmemo/memos:latest
     container_name: memos
+    image: neosmemo/memos:latest
     volumes:
       - ./data:/var/opt/memos
     ports:
       - 5230:5230
-    labels:
-      - homepage.group=Herramientas
-      - homepage.name=Memos
-      - homepage.icon=memos.png
-      - homepage.href=http://192.168.100.93:5230/
-      - homepage.description=Notas
+    restart: unless-stopped

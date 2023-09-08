@@ -2,7 +2,7 @@ version: '3.3'
 services:
     libreddit:
         container_name: libreddit
+        image: libreddit/libreddit
         ports:
             - '8085:8080'
-        image: libreddit/libreddit
         restart: unless-stopped
