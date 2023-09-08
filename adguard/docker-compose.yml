@@ -13,4 +13,3 @@ services:
       - 53:53/udp
     hostname: adguard
     restart: unless-stopped
-    #test
