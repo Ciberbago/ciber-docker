@@ -9,7 +9,7 @@ services:
       - ./data/conf:/opt/adguardhome/conf
     ports:
       - 53:53/tcp
-      - 83:80/tcp
+      - 83:83/tcp
       - 53:53/udp
     hostname: adguard
     restart: unless-stopped

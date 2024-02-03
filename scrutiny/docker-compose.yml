@@ -13,7 +13,7 @@ services:
       - "8086:8086" # influxDB admin
     devices:
       - "/dev/sda"
-      - "/dev/sdb"
+      - "/dev/nvme0n1"
     cap_add:
       - SYS_RAWIO
     restart: unless-stopped

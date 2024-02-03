@@ -12,3 +12,5 @@ services:
       ND_SESSIONTIMEOUT: 168h
     user: 0:0
     restart: unless-stopped
+    environment:
+        ND_SESSIONTIMEOUT: 168h
