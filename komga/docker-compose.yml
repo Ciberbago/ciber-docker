@@ -11,3 +11,4 @@ services:
     ports:
       - 8081:25600
     restart: unless-stopped
+#prubeba 2 XD
