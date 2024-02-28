@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    homelists:
+        container_name: homelists
+        environment:
+            - TZ=America/Tijuana
+        volumes:
+            - './data:/data/homelists'
+        ports:
+            - '8842:8842'
+        image: aceberg/homelists
+        restart: unless-stopped
