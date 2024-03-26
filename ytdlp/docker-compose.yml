@@ -1,0 +1,11 @@
+version: "3"
+services:
+  yt-dlp-webui:
+    container_name: ytdlpgui
+    image: ghcr.io/marcopeocchi/yt-dlp-web-ui:latest
+    volumes:
+      - ${EXTERNO}/videos:/downloads
+      - ${EXTERNO}/music:/downloads/musica
+    ports:
+      - "3023:3033"
+    restart: unless-stopped
