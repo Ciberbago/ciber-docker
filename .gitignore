@@ -16,3 +16,4 @@ scrutiny/influxdb/engine/data/9d11bbc543817aa1
 scrutiny/influxdb/config.yaml
 scrutiny/influxdb/influxd.bolt
 scrutiny/influxdb
+homelist/data
