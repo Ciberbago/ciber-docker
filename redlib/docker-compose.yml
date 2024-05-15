@@ -1,0 +1,25 @@
+services:
+  redlib:
+    image: quay.io/redlib/redlib:latest
+    # image: quay.io/redlib/redlib:latest-arm # uncomment if you use arm64
+    # image: quay.io/redlib/redlib:latest-armv7 # uncomment if you use armv7
+    restart: unless-stopped
+    container_name: "redlib"
+    ports:
+      - 8085:8080 # Specify `127.0.0.1:8080:8080` instead if using a reverse proxy
+    user: nobody
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+      # - seccomp=seccomp-redlib.json
+    cap_drop:
+      - ALL
+    networks:
+      - redlib
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "--tries=1", "http://localhost:8082/settings"]
+      interval: 5m
+      timeout: 3s
+
+networks:
+  redlib:
