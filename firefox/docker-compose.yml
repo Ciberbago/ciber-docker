@@ -1,0 +1,19 @@
+---
+services:
+  firefox:
+    image: lscr.io/linuxserver/firefox:latest
+    container_name: firefox
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - FIREFOX_CLI=https://www.linuxserver.io/ #optional
+    volumes:
+      - ./data:/config
+    ports:
+      - 3010:3000
+      - 3011:3001
+    shm_size: "1gb"
+    restart: unless-stopped
