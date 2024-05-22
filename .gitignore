@@ -17,3 +17,4 @@ scrutiny/influxdb/config.yaml
 scrutiny/influxdb/influxd.bolt
 scrutiny/influxdb
 homelist/data
+firefox/data
