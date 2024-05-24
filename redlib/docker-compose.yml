@@ -18,7 +18,7 @@ services:
       - redlib
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "--tries=1", "http://127.0.0.1:8080/settings"]
-      interval: 3s
+      interval: 5m
       timeout: 3s
 networks:
   redlib:
