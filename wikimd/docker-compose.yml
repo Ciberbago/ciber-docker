@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  wikmd:
+    image: linbreux/wikmd:edge
+    container_name: wikmd
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Tijuana
+    volumes:
+      - ./data:/wiki
+    ports:
+      - 5500:5000
+    restart: unless-stopped
