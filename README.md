@@ -10,3 +10,6 @@ for dir in */; do (cd "$dir" && docker compose --env-file ../.env up -d); done
 ```
 docker compose --env-file ../.env up -d
 ```
+```
+test
+```
