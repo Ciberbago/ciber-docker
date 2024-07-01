@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  wg-easy:
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    container_name: wg-easy
+    environment:
+      - WG_HOST=vpn.jaimelopez.top # your hostname or ip address
+      - PASSWORD=changeme # change this
+      - WG_DEFAULT_DNS=8.8.8.8,1.1.1.1,192.168.7.210 # add your local dns like pihole
+    hostname: wireguard-easy
+    image: ghcr.io/wg-easy/wg-easy:latest
+    ports:
+      - 51820:51820/udp #VPN
+      - 51821:51821/tcp #WEBGUI
+    restart: unless-stopped
+    volumes:
+      - ./data:/etc/wireguard

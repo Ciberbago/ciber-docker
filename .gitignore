@@ -19,3 +19,5 @@ scrutiny/influxdb
 homelist/data
 firefox/data
 wikimd/data
+wg-easy/data
+ddns/data
