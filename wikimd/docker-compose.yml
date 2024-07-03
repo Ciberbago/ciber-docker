@@ -1,5 +1,4 @@
 ---
-version: "2.1"
 services:
   wikmd:
     image: linbreux/wikmd:edge

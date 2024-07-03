@@ -1,4 +1,3 @@
- version: '3'
  services:
    wolweb: 
      container_name: 'wolweb'
