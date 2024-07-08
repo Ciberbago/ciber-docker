@@ -10,6 +10,6 @@ services:
     environment:
       - user_count=1
       - user1=jaime
-      - password1=15963pknht
+      - password1=changeme
       - sharename1=NAS
     restart: unless-stopped
