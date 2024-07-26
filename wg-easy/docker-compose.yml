@@ -1,4 +1,3 @@
-
 services:
   wg-easy:
     cap_add:
@@ -8,9 +7,10 @@ services:
     environment:
       - WG_HOST=vpn.jaimelopez.top # your hostname or ip address
       - PASSWORD=changeme # change this
-      - WG_DEFAULT_DNS=8.8.8.8,1.1.1.1,192.168.7.210 # add your local dns like pihole
+      - WG_DEFAULT_DNS=1.1.1.1,8.8.8.8 # add your local dns like pihole
+      #- WG_ALLOWED_IPS=0.0.0.0/0, ::/0 o 192.168.7.0/24 para solo acceder a red local
     hostname: wireguard-easy
-    image: ghcr.io/wg-easy/wg-easy:latest
+    image: ghcr.io/wg-easy/wg-easy:nightly
     ports:
       - 51820:51820/udp #VPN
       - 51821:51821/tcp #WEBGUI
