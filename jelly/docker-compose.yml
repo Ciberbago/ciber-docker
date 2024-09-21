@@ -17,5 +17,5 @@ services:
     devices:
       # VAAPI Devices (examples)
       - /dev/dri/renderD128:/dev/dri/renderD128
-      - /dev/dri/card0:/dev/dri/card0
+      - /dev/dri:/dev/dri
     restart: unless-stopped
